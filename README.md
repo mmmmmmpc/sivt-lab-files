@@ -1,7 +1,7 @@
 # sivt-lab-files
 Files for Service Installer for VMware Tanzu (SIVT) Lab ... a.k.a "Arcas"
 
-They are inteneded to be used in th eTanzu Learning Zone lab available for VMware associates, although, it may serve you as samples when using Service Installer.
+They are intended to be used in the Tanzu Learning Zone lab available for VMware associates, although, it may serve you as samples when using Service Installer.
 
 Files used for deploying TKGm on vSphere with Virtual Switches
 * `run_arcas_dvs.sh` - Simple tiny script to run all the steps needed to deploy TKGm on vSphere with Virtual Swiches
