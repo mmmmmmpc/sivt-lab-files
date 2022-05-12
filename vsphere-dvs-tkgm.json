@@ -1,0 +1,200 @@
+{
+	"envSpec": {
+		"vcenterDetails": {
+			"vcenterAddress": "vcenter.tanzu.lab",
+			"vcenterSsoUser": "administrator@vsphere.local",
+			"vcenterSsoPasswordBase64": "Vk13YXJlMSE=",
+			"vcenterDatacenter": "tanzu-dc01",
+			"vcenterCluster": "VMware-Cloud",
+			"vcenterDatastore": "vsan-storage",
+			"contentLibraryName": "AVI-Templates",
+			"aviOvaName": "controller-20.1.7-9154",
+			"resourcePoolName": "Workloads"
+		},
+		"envType": "tkgm",
+		"marketplaceSpec": {
+			"refreshToken": ""
+		},
+		"saasEndpoints": {
+			"tmcDetails": {
+				"tmcAvailability": "false",
+				"tmcRefreshToken": ""
+			},
+			"tanzuObservabilityDetails": {
+				"tanzuObservabilityAvailability": "false",
+				"tanzuObservabilityUrl": "",
+				"tanzuObservabilityRefreshToken": ""
+			}
+		},
+		"infraComponents": {
+			"dnsServersIp": "192.168.110.10",
+			"ntpServers": "192.168.110.10",
+			"searchDomains": "tanzu.lab"
+		},
+		"proxySpec": {
+			"arcasVm": {
+				"enableProxy": "false",
+				"httpProxy": "",
+				"httpsProxy": "",
+				"noProxy": ""
+			},
+			"tkgMgmt": {
+				"enableProxy": "false",
+				"httpProxy": "",
+				"httpsProxy": "",
+				"noProxy": ""
+			},
+			"tkgSharedservice": {
+				"enableProxy": "false",
+				"httpProxy": "",
+				"httpsProxy": "",
+				"noProxy": ""
+			},
+			"tkgWorkload": {
+				"enableProxy": "false",
+				"httpProxy": "",
+				"httpsProxy": "",
+				"noProxy": ""
+			}
+		}
+	},
+	"tkgComponentSpec": {
+		"aviMgmtNetwork": {
+			"aviMgmtNetworkName": "vcf-management",
+			"aviMgmtNetworkGatewayCidr": "192.168.110.1/24",
+			"aviMgmtServiceIpStartRange": "192.168.110.190",
+			"aviMgmtServiceIpEndRange": "192.168.110.199"
+		},
+		"tkgClusterVipNetwork": {
+			"tkgClusterVipNetworkName": "TKG-Cluster-VIP",
+			"tkgClusterVipNetworkGatewayCidr": "192.168.20.1/24",
+			"tkgClusterVipIpStartRange": "192.168.20.100",
+			"tkgClusterVipIpEndRange": "192.168.20.199"
+		},
+		"aviComponents": {
+			"aviPasswordBase64": "Vk13YXJlMSE=",
+			"aviBackupPassphraseBase64": "Vk13YXJlMSE=",
+			"enableAviHa": "false",
+			"aviController01Ip": "192.168.110.40",
+			"aviController01Fqdn": "avi-controller.tanzu.lab",
+			"aviController02Ip": "",
+			"aviController02Fqdn": "",
+			"aviController03Ip": "",
+			"aviController03Fqdn": "",
+			"aviClusterIp": "",
+			"aviClusterFqdn": "",
+			"aviSize": "essentials",
+			"aviCertPath": "",
+			"aviCertKeyPath": ""
+		},
+		"tkgMgmtComponents": {
+			"tkgMgmtNetworkName": "TKG-Management",
+			"tkgMgmtGatewayCidr": "192.168.22.1/24",
+			"tkgMgmtClusterName": "tkg-mgmt",
+			"tkgMgmtSize": "large",
+			"tkgMgmtCpuSize": "",
+			"tkgMgmtMemorySize": "",
+			"tkgMgmtStorageSize": "",
+			"tkgMgmtDeploymentType": "dev",
+			"tkgMgmtClusterCidr": "100.96.0.0/11",
+			"tkgMgmtServiceCidr": "100.64.0.0/13",
+			"tkgMgmtBaseOs": "photon",
+			"tkgSharedserviceClusterName": "tkg-shrd",
+			"tkgSharedserviceSize": "medium",
+			"tkgSharedserviceCpuSize": "",
+			"tkgSharedserviceMemorySize": "",
+			"tkgSharedserviceStorageSize": "",
+			"tkgSharedserviceDeploymentType": "dev",
+			"tkgSharedserviceWorkerMachineCount": "1",
+			"tkgSharedserviceClusterCidr": "100.96.0.0/11",
+			"tkgSharedserviceServiceCidr": "100.64.0.0/13",
+			"tkgSharedserviceBaseOs": "photon",
+			"tkgSharedserviceKubeVersion": "v1.22.5"
+		}
+	},
+	"tkgMgmtDataNetwork": {
+		"tkgMgmtDataNetworkName": "TKG-Management-Data",
+		"tkgMgmtDataNetworkGatewayCidr": "192.168.21.1/24",
+		"tkgMgmtAviServiceIpStartRange": "192.168.21.100",
+		"tkgMgmtAviServiceIpEndRange": "192.168.21.199"
+	},
+	"tkgWorkloadDataNetwork": {
+		"tkgWorkloadDataNetworkName": "TKG-Workload-Data",
+		"tkgWorkloadDataNetworkGatewayCidr": "192.168.31.1/24",
+		"tkgWorkloadAviServiceIpStartRange": "192.168.31.100",
+		"tkgWorkloadAviServiceIpEndRange": "192.168.31.199"
+	},
+	"tkgWorkloadComponents": {
+		"tkgWorkloadNetworkName": "TKG-Workload",
+		"tkgWorkloadGatewayCidr": "192.168.32.1/24",
+		"tkgWorkloadClusterName": "tkg-wrkl",
+		"tkgWorkloadSize": "medium",
+		"tkgWorkloadCpuSize": "",
+		"tkgWorkloadMemorySize": "",
+		"tkgWorkloadStorageSize": "",
+		"tkgWorkloadDeploymentType": "dev",
+		"tkgWorkloadWorkerMachineCount": "2",
+		"tkgWorkloadClusterCidr": "100.96.0.0/11",
+		"tkgWorkloadServiceCidr": "100.64.0.0/13",
+		"tkgWorkloadBaseOs": "photon",
+		"tkgWorkloadKubeVersion": "v1.22.5",
+		"tkgWorkloadTsmIntegration": "false",
+		"namespaceExclusions": {
+			"exactName": "",
+			"startsWith": ""
+		}
+	},
+	"harborSpec": {
+		"enableHarborExtension": "true",
+		"harborFqdn": "harbor.tanzu.lab",
+		"harborPasswordBase64": "Vk13YXJlMSE=",
+		"harborCertPath": "",
+		"harborCertKeyPath": ""
+	},
+	"tanzuExtensions": {
+		"enableExtensions": "false",
+		"tkgClustersName": "",
+		"logging": {
+			"syslogEndpoint": {
+				"enableSyslogEndpoint": "false",
+				"syslogEndpointAddress": "",
+				"syslogEndpointPort": "",
+				"syslogEndpointMode": "",
+				"syslogEndpointFormat": ""
+			},
+			"httpEndpoint": {
+				"enableHttpEndpoint": "false",
+				"httpEndpointAddress": "",
+				"httpEndpointPort": "",
+				"httpEndpointUri": "",
+				"httpEndpointHeaderKeyValue": ""
+			},
+			"elasticSearchEndpoint": {
+				"enableElasticSearchEndpoint": "false",
+				"elasticSearchEndpointAddress": "",
+				"elasticSearchEndpointPort": ""
+			},
+			"kafkaEndpoint": {
+				"enableKafkaEndpoint": "false",
+				"kafkaBrokerServiceName": "",
+				"kafkaTopicName": ""
+			},
+			"splunkEndpoint": {
+				"enableSplunkEndpoint": "false",
+				"splunkEndpointAddress": "",
+				"splunkEndpointPort": "",
+				"splunkEndpointToken": ""
+			}
+		},
+		"monitoring": {
+			"enableLoggingExtension": "false",
+			"prometheusFqdn": "",
+			"prometheusCertPath": "",
+			"prometheusCertKeyPath": "",
+			"grafanaFqdn": "",
+			"grafanaCertPath": "",
+			"grafanaCertKeyPath": "",
+			"grafanaPasswordBase64": ""
+		}
+	}
+}
