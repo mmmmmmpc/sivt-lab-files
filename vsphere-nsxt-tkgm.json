@@ -19,10 +19,15 @@
 		"marketplaceSpec": {
 			"refreshToken": ""
 		},
+		"customRepositorySpec": {
+			"tkgCustomImageRepository": "",
+			"tkgCustomImageRepositoryPublicCaCert": ""
+		},
 		"saasEndpoints": {
 			"tmcDetails": {
 				"tmcAvailability": "false",
-				"tmcRefreshToken": ""
+				"tmcRefreshToken": "",
+				"tmcInstanceURL": ""
 			},
 			"tanzuObservabilityDetails": {
 				"tanzuObservabilityAvailability": "false",
@@ -87,9 +92,35 @@
 			"aviController03Fqdn": "",
 			"aviClusterIp": "",
 			"aviClusterFqdn": "",
-			"aviSize": "small",
+			"aviSize": "essentials",
 			"aviCertPath": "",
 			"aviCertKeyPath": ""
+		},
+		"identityManagementSpec": {
+			"identityManagementType": "",
+			"oidcSpec": {
+				"oidcIssuerUrl": "",
+				"oidcClientId": "",
+				"oidcClientSecret": "",
+				"oidcScopes": "",
+				"oidcUsernameClaim": "",
+				"oidcGroupsClaim": ""
+			},
+			"ldapSpec": {
+				"ldapEndpointIp": "",
+				"ldapEndpointPort": "",
+				"ldapBindPWBase64": "",
+				"ldapBindDN": "",
+				"ldapUserSearchBaseDN": "",
+				"ldapUserSearchFilter": "",
+				"ldapUserSearchUsername": "",
+				"ldapGroupSearchBaseDN": "",
+				"ldapGroupSearchFilter": "",
+				"ldapGroupSearchUserAttr": "",
+				"ldapGroupSearchGroupAttr": "",
+				"ldapGroupSearchNameAttr": "",
+				"ldapRootCAData": ""
+			}
 		},
 		"tkgMgmtComponents": {
 			"tkgMgmtNetworkName": "nsx-tkg-mgmt",
@@ -102,7 +133,14 @@
 			"tkgMgmtDeploymentType": "dev",
 			"tkgMgmtClusterCidr": "100.96.0.0/11",
 			"tkgMgmtServiceCidr": "100.64.0.0/13",
-			"tkgMgmtBaseOs": "photon"
+			"tkgMgmtBaseOs": "photon",
+			"tkgMgmtClusterGroupName": "",
+			"tkgMgmtRbacUserRoleSpec": {
+				"clusterAdminUsers": "",
+				"adminUsers": "",
+				"editUsers": "",
+				"viewUsers": ""
+			}
 		},
 		"tkgSharedserviceSpec": {
 			"tkgSharedserviceNetworkName": "nsx-tkg-svc",
@@ -119,7 +157,17 @@
 			"tkgSharedserviceClusterCidr": "100.96.0.0/11",
 			"tkgSharedserviceServiceCidr": "100.64.0.0/13",
 			"tkgSharedserviceBaseOs": "photon",
-			"tkgSharedserviceKubeVersion": "v1.22.5"
+			"tkgSharedserviceKubeVersion": "v1.22.8",
+			"tkgSharedserviceRbacUserRoleSpec": {
+				"clusterAdminUsers": "",
+				"adminUsers": "",
+				"editUsers": "",
+				"viewUsers": ""
+			},
+			"tkgSharedserviceClusterGroupName": "",
+			"tkgSharedserviceEnableDataProtection": "false",
+			"tkgSharedClusterCredential": "",
+			"tkgSharedClusterBackupLocation": ""
 		}
 	},
 	"tkgMgmtDataNetwork": {
@@ -149,12 +197,22 @@
 		"tkgWorkloadClusterCidr": "100.96.0.0/11",
 		"tkgWorkloadServiceCidr": "100.64.0.0/13",
 		"tkgWorkloadBaseOs": "photon",
-		"tkgWorkloadKubeVersion": "v1.22.5",
+		"tkgWorkloadKubeVersion": "v1.22.8",
+		"tkgWorkloadRbacUserRoleSpec": {
+			"clusterAdminUsers": "",
+			"adminUsers": "",
+			"editUsers": "",
+			"viewUsers": ""
+		},
 		"tkgWorkloadTsmIntegration": "false",
 		"namespaceExclusions": {
 			"exactName": "",
 			"startsWith": ""
-		}
+		},
+		"tkgWorkloadClusterGroupName": "",
+		"tkgWorkloadEnableDataProtection": "false",
+		"tkgWorkloadClusterCredential": "",
+		"tkgWorkloadClusterBackupLocation": ""
 	},
 	"harborSpec": {
 		"enableHarborExtension": "true",
@@ -181,21 +239,10 @@
 				"httpEndpointUri": "",
 				"httpEndpointHeaderKeyValue": ""
 			},
-			"elasticSearchEndpoint": {
-				"enableElasticSearchEndpoint": "false",
-				"elasticSearchEndpointAddress": "",
-				"elasticSearchEndpointPort": ""
-			},
 			"kafkaEndpoint": {
 				"enableKafkaEndpoint": "false",
 				"kafkaBrokerServiceName": "",
 				"kafkaTopicName": ""
-			},
-			"splunkEndpoint": {
-				"enableSplunkEndpoint": "false",
-				"splunkEndpointAddress": "",
-				"splunkEndpointPort": "",
-				"splunkEndpointToken": ""
 			}
 		},
 		"monitoring": {
