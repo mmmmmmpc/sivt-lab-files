@@ -8,7 +8,7 @@
 			"vcenterCluster": "VMware-Cloud",
 			"vcenterDatastore": "vsan-storage",
 			"contentLibraryName": "AVI-Templates",
-			"aviOvaName": "controller-20.1.6-9132",
+			"aviOvaName": "controller-20.1.7-9154",
 			"resourcePoolName": "Workloads"
 		},
 		"envType": "tkgm",
