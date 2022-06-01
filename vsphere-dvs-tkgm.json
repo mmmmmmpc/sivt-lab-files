@@ -6,7 +6,7 @@
 			"vcenterSsoPasswordBase64": "Vk13YXJlMSE=",
 			"vcenterDatacenter": "tanzu-dc01",
 			"vcenterCluster": "VMware-Cloud",
-			"vcenterDatastore": "vsan-storage",
+			"vcenterDatastore": "iscsi-storage",
 			"contentLibraryName": "AVI-Templates",
 			"aviOvaName": "controller-20.1.7-9154",
 			"resourcePoolName": "Workloads"
