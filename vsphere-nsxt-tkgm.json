@@ -8,7 +8,7 @@
 			"vcenterCluster": "VMware-Cloud",
 			"vcenterDatastore": "iscsi-storage",
 			"contentLibraryName": "AVI-Templates",
-			"aviOvaName": "controller-20.1.7-9154",
+			"aviOvaName": "controller-21.1.4-9210",
 			"resourcePoolName": "Workloads",
 			"nsxtAddress": "nsx-mgr.tanzu.lab",
 			"nsxtUser": "admin",
@@ -157,7 +157,7 @@
 			"tkgSharedserviceClusterCidr": "100.96.0.0/11",
 			"tkgSharedserviceServiceCidr": "100.64.0.0/13",
 			"tkgSharedserviceBaseOs": "photon",
-			"tkgSharedserviceKubeVersion": "v1.22.8",
+			"tkgSharedserviceKubeVersion": "v1.22.9",
 			"tkgSharedserviceRbacUserRoleSpec": {
 				"clusterAdminUsers": "",
 				"adminUsers": "",
@@ -197,7 +197,7 @@
 		"tkgWorkloadClusterCidr": "100.96.0.0/11",
 		"tkgWorkloadServiceCidr": "100.64.0.0/13",
 		"tkgWorkloadBaseOs": "photon",
-		"tkgWorkloadKubeVersion": "v1.22.8",
+		"tkgWorkloadKubeVersion": "v1.22.9",
 		"tkgWorkloadRbacUserRoleSpec": {
 			"clusterAdminUsers": "",
 			"adminUsers": "",
